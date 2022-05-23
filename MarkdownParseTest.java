@@ -85,4 +85,16 @@ public class MarkdownParseTest {
     // public void testUniverseWorks() {
     //     assertEquals(1,1);
     // }
+
+    @Test 
+    public void getLinksCheckSnippet7() throws IOException{
+        
+        String fileName = "test-file8.md";
+        Path fileName1 = Path.of(fileName);
+        String content = Files.readString(fileName1);
+       ArrayList<String> a=new ArrayList<String>();
+       //a.add("");
+       //a.add("some-thing.html");
+        assertEquals((a), MarkdownParse.getLinks(content) );
+    }
 }
